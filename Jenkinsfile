@@ -19,7 +19,7 @@ pipeline {
 			}
 			steps {
 				echo 'testing the applicaiton...'
-                echo "$(env.GIT_BRANCH)"
+                echo "${env.GIT_BRANCH}"
 			}
 		}
 		stage("deploy") {

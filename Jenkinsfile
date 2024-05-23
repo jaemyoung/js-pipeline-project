@@ -9,6 +9,7 @@ pipeline {
 			}
 			steps {
 				echo 'building the applicaiton...'
+                echo "${env.GIT_BRANCH}"
 			}
 		}
 		stage("test") {

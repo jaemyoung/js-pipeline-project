@@ -44,6 +44,7 @@ pipeline {
 					sh "docker tag jenkins-pipeline_web:latest ${DOCKER_USER_ID}/jenkins-app:${BUILD_NUMBER}"
 					sh "docker login -u ${DOCKER_USER_ID} -p ${DOCKER_USER_PASSWORD}"
 					sh "docker push ${DOCKER_USER_ID}/jenkins-app:${BUILD_NUMBER}"
+					echo "완료"
 				}
 			}
 		}
